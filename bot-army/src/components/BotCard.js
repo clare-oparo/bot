@@ -18,7 +18,7 @@ const BotCard = ({ bot, onBotClick, dischargeBot, onDeleteBot }) => {
       <p>Health: {bot.health}</p>
       <p>Damage: {bot.damage}</p>
       <p>Armor: {bot.armor}</p>
-      <p>Bot Class: {bot.bot_class}</p>
+      
       {dischargeBot && <button onClick={handleDischargeClick}>Discharge from Army</button>}
       
     </div>

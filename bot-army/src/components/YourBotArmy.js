@@ -5,6 +5,7 @@ const YourBotArmy = ({ botArmy, onReleaseFromArmy, onDeleteBot }) => {
   return (
     <div className="your-bot-army">
       <h2>Your Bot Army</h2>
+      
       {botArmy.length > 0 ? (
         botArmy.map(bot => (
           <BotCard
