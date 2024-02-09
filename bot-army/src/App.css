@@ -1,38 +1,64 @@
 .App {
   text-align: center;
+  font-family: 'Arial', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bot-collection, .your-bot-army {
+  margin: 20px 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px; 
+}
+
+.bot-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 200px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+
+.bot-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; 
+}
+
+.bot-card h2, .bot-card p {
+  margin: 10px;
+}
+
+.bot-card button {
+  background-color: #ff4757;
   color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.bot-card button:hover {
+  background-color: #ff6b81;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bot-card:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+@media (max-width: 768px) {
+  .bot-collection, .your-bot-army {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .bot-card {
+    width: 90%; 
   }
 }
